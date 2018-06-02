@@ -1,12 +1,13 @@
 <template>
     <div>
         <div>
-            <span>Name</span>
-            <input type="text">
+            <input placeholder="Name your Pilot" type="text">
         </div>
         <div>
-            <span>Pilot ability</span>
-            <textarea name="pilotability" id="" cols="30" rows="10"></textarea>
+            <input placeholder="Initiative" type="Number" min="1" max="6">
+        </div>
+        <div>
+            <textarea placeholder="Abililty text of your pilot" name="pilotability" id="" rows="10"></textarea>
         </div>
     </div>
 </template>
