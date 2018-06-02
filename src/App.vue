@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="logo">logo</div>
     <router-view/>
   </div>
 </template>
@@ -11,8 +12,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+html, body{
+  height: 100%;
+}
 #app {
+  .logo{
+    height: 20%;
+  }
+  height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

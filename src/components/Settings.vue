@@ -1,10 +1,10 @@
 <template>
     <div>
         <nav class="settingsMenu">
-            <router-link to="pilot">Pilot</router-link>
-            <router-link to="ship">Ship</router-link>
+            <router-link class="settingsItem pilot" to="pilot">Pilot</router-link>
+            <router-link class="settingsItem ship" to="ship">Ship</router-link>
         </nav>
-        <router-view></router-view>
+        <router-view class="content"></router-view>
     </div>
 </template>
 
@@ -17,6 +17,19 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    .settingsMenu{
+        display: flex;
+        .settingsItem{
+            flex-grow: 1;
+            min-width: 100px;
+            display: block;
+            &.router-link-active{
+                border-bottom: 1px solid #4e4e4e;
+            }
+        }
+    }
+    .content{
+        padding-top: 2rem;
+    }
 </style>
