@@ -19,9 +19,9 @@ export default {};
     justify-content: center;
 }
 .card {
-  height: 440px;
-  width: 318px;
   background-color: black;
+  width: 318px;
+  height: 440px;
   color: white;
 }
 </style>

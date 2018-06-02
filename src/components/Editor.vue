@@ -25,5 +25,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .container{
+    width: 100%;
+  }
+ .row{
+   height: 100%;
+ }
 </style>

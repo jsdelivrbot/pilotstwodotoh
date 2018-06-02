@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="logo">logo</div>
-    <router-view/>
+    <router-view class="content"/>
   </div>
 </template>
 
@@ -17,14 +17,17 @@ html, body{
   height: 100%;
 }
 #app {
-  .logo{
-    height: 20%;
-  }
   height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  .logo{
+    height: 150px;
+  }
+  .content{
+    height: calc(100% - 150px);
+  }
 }
 </style>

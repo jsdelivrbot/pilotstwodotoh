@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="subcontent">
         <nav class="settingsMenu">
             <router-link class="settingsItem pilot" to="pilot">Pilot</router-link>
             <router-link class="settingsItem ship" to="ship">Ship</router-link>
@@ -18,6 +18,10 @@
 </script>
 
 <style lang="scss" scoped>
+    .subcontent{
+        height: 100%;
+        width: 100%;
+    }
     .settingsMenu{
         display: flex;
         .settingsItem{
