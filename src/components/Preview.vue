@@ -25,6 +25,7 @@ export default {};
 .container {
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 .card {
   background-color: black;
