@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="row">
-            <Settings class="column column-50"/>
-            <Preview class="column column-50"/>
+            <Settings class="column"/>
+            <Preview class="column"/>
         </div>
     </div>
 </template>
