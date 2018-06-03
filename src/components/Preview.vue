@@ -1,6 +1,14 @@
 <template>
     <div class="container">
-        <div class="card">Preview</div>
+        <div class="card">
+            <div class="pilot-initiative">{{$store.state.pilot.initiative}}</div>
+            <div class="pilot-name">{{$store.state.pilot.name}}</div>
+            <div class="pilot-initiative">{{$store.state.pilot.ability}}</div>
+            <div class="ship-name">{{ $store.state.ship.name }}</div>
+            <div class="ship-ability">{{ $store.state.ship.ability }}</div>
+            <div class="ship-hull">Hull {{ $store.state.ship.hull }}</div>
+            <div class="ship-shields">Shields {{ $store.state.ship.shields }}</div>
+        </div>
     </div>
     
 </template>
@@ -14,9 +22,9 @@ export default {};
         Unsleeved Pilot Card Length – 88mm
         Unsleeved Pilot Card Width – 63.5mm
     */
-.container{
-    display: flex;
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: center;
 }
 .card {
   background-color: black;
