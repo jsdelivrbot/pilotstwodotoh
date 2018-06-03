@@ -4,8 +4,9 @@
             <input placeholder="Name your Ship" v-model="name" class="column column-100" type="text">
         </div>
         <div class="row split">
-            <input placeholder="Hull" class="column column-50" v-model="hull" type="Number" min="1">
-            <input placeholder="Shields" class="column column-50" v-model="shields" type="Number" min="0">
+            <input placeholder="Hull" class="column" v-model="hull" type="Number" min="1">
+            <input placeholder="Shields" class="column" v-model="defense" type="Number" min="0">
+            <input placeholder="Defense" class="column" v-model="shields" type="Number" min="0">
         </div>
         <div class="row">
             <textarea placeholder="Special Ship rules" class="column column-100" v-model="ability" name="shipability" id="" rows="10"></textarea>
@@ -19,7 +20,8 @@ function updateShip(oldVal, newVal) {
     name: this.name,
     hull: this.hull,
     shields: this.shields,
-    ability: this.ability
+    ability: this.ability,
+    defense: this.defense
   });
 }
 
@@ -28,16 +30,34 @@ export default {
   data() {
     return {
       ability: "",
-      name: "",
-      hull: 1,
-      shields: 0
-    };
+      name: "T-65 X-Wing",
+      hull: 4,
+      shields: 2,
+      defense: 2,
+      actions: [
+        {
+          type: "focus",
+          difficulty: "white",
+          linked: {
+            type: "barrel",
+            difficulty: "red"
+          }
+        }
+      ],
+      arcs: [
+        {
+          type: "front",
+          value: "3"
+        }
+      ]
+    }
   },
   watch: {
     name: updateShip,
     hull: updateShip,
     shields: updateShip,
-    ability: updateShip
+    ability: updateShip,
+    defense: updateShip
   }
 };
 </script>
@@ -55,6 +75,9 @@ textarea[name="shipability"] {
 
     &.split {
       display: flex;
+      input{
+        margin-right: 1rem;
+      }
     }
   }
 }

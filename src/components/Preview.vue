@@ -3,11 +3,12 @@
         <div class="card">
             <div class="pilot-initiative">{{$store.state.pilot.initiative}}</div>
             <div class="pilot-name">{{$store.state.pilot.name}}</div>
-            <div class="pilot-initiative">{{$store.state.pilot.ability}}</div>
+            <div class="pilot-ability">{{$store.state.pilot.ability}}</div>
             <div class="ship-name">{{ $store.state.ship.name }}</div>
             <div class="ship-ability">{{ $store.state.ship.ability }}</div>
             <div class="ship-hull">Hull {{ $store.state.ship.hull }}</div>
             <div class="ship-shields">Shields {{ $store.state.ship.shields }}</div>
+            <div class="ship-defense">Defense {{ $store.state.ship.defense }}</div>
         </div>
     </div>
     

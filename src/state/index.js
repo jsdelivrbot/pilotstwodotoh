@@ -16,7 +16,8 @@ export default new Vuex.Store({
       //Bullseye, mobile90, mobile180, front180, back180, front, back
       arcs: [],
       name: 'Name',
-      ability: ''
+      ability: '',
+      defense: 0
     },
     layout: {
       mode: 'portrait'
