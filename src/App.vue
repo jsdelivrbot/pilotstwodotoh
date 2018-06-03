@@ -27,7 +27,7 @@ html, body{
     height: 150px;
   }
   .content{
-    height: calc(100% - 150px);
+    min-height: calc(100% - 150px);
   }
 }
 </style>
