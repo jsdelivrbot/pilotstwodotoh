@@ -1,11 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+Vue.use(Vuex);
+
 export default new Vuex.Store({
   state: {
     pilot: {
       initiative: '1',
-      ability: 'Pilot ability text'
+      name: '',
+      ability: ''
     },
     ship: {
       hull: '1',
@@ -13,7 +16,7 @@ export default new Vuex.Store({
       //Bullseye, mobile90, mobile180, front180, front, back?
       arcs: [],
       name: 'Name',
-      ability: 'Ship ability text'
+      ability: ''
     },
     design: {
       mode: 'portrait',
@@ -23,13 +26,18 @@ export default new Vuex.Store({
   mutations: {
     // manipulate state here (has to be syncronous)
     setPilot(state, pilot) {
-
+      state.pilot = pilot;
     },
     setShip(state, ship) {
-
+      state.ship = ship;
     }
   },
   actions: {
-    // do asnyc operations here and then commit your mutations
+    updatePilot(context, pilot) {
+      context.commit('setPilot', pilot);
+    },
+    updateShip(context, ship) {
+      context.commit('setShip', ship);
+    }
   }
 })
