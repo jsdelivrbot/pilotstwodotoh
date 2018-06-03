@@ -2,6 +2,8 @@
 
  Web Application for X-Wing 2.0 to create custom full art pilot cards. This is still under heavy development and not ready in any shape or form. Even the name is 'under development'.
 
+ You can see the progress [here](https://kelrien.github.io/pilotstwodotoh/#/edit/ship)
+
  If you wish to participate in this project just contact me in the [X-WingTMG Slack](https://slofile.com/slack/xwingtmgk).
 
 
