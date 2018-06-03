@@ -3,6 +3,7 @@
         <nav class="settingsMenu">
             <router-link class="settingsItem pilot" to="pilot">Pilot</router-link>
             <router-link class="settingsItem ship" to="ship">Ship</router-link>
+            <router-link class="settingsItem layout" to="layout">Layout</router-link>
         </nav>
         <router-view class="content"></router-view>
     </div>

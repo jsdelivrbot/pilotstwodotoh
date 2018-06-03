@@ -13,13 +13,13 @@ export default new Vuex.Store({
     ship: {
       hull: '1',
       shields: '0',
-      //Bullseye, mobile90, mobile180, front180, front, back?
+      //Bullseye, mobile90, mobile180, front180, back180, front, back
       arcs: [],
       name: 'Name',
       ability: ''
     },
-    design: {
-      mode: 'portrait',
+    layout: {
+      mode: 'portrait'
 
     }
   },
