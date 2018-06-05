@@ -20,8 +20,8 @@ export default new Vuex.Store({
       defense: 0
     },
     layout: {
-      mode: 'portrait'
-
+      mode: 'portrait',
+      imageUrl: 'https://cdna.artstation.com/p/assets/images/images/008/756/972/large/klaus-wittmann-bob1.jpg?1515102092'
     }
   },
   mutations: {
@@ -31,6 +31,9 @@ export default new Vuex.Store({
     },
     setShip(state, ship) {
       state.ship = ship;
+    },
+    setLayout(state, layout){
+      state.layout = layout
     }
   },
   actions: {
@@ -39,6 +42,9 @@ export default new Vuex.Store({
     },
     updateShip(context, ship) {
       context.commit('setShip', ship);
+    },
+    updateLayout(context, layout){
+
     }
   }
 })

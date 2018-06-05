@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="card">
+        <div v-bind:style="{backgroundImage: `url(${$store.state.layout.imageUrl})`}" class="card">
             <div class="pilot-initiative">{{$store.state.pilot.initiative}}</div>
             <div class="pilot-name">{{$store.state.pilot.name}}</div>
             <div class="pilot-ability">{{$store.state.pilot.ability}}</div>
@@ -30,6 +30,9 @@ export default {};
 }
 .card {
   background-color: black;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 318px;
   height: 440px;
   color: white;
