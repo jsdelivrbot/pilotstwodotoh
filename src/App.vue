@@ -6,27 +6,29 @@
 </template>
 
 <script>
-require('milligram');
+require("milligram");
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style lang="scss">
-html, body{
+html,
+body {
   height: 100%;
 }
 #app {
   height: 100%;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  .logo{
+
+  .logo {
     height: 150px;
   }
-  .content{
+  .content {
     min-height: calc(100% - 150px);
   }
 }

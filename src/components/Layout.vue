@@ -7,23 +7,27 @@
 </template>
 
 <script>
+function updateLayout() {
+  this.$store.dispatch("updateLayout", {
+    name: this.name,
+    initiative: this.initiative,
+    ability: this.ability
+  });
+}
+
 export default {
   name: "Layout",
   data() {
     return {
-        imageUrl: "https://cdna.artstation.com/p/assets/images/images/008/756/972/large/klaus-wittmann-bob1.jpg?1515102092"
+      imageUrl:
+        "https://cdna.artstation.com/p/assets/images/images/008/756/972/large/klaus-wittmann-bob1.jpg?1515102092"
     };
   },
-  methods: {
-    updateLayout() {
-      this.$store.dispatch("updateLayout", {
-        name: this.name,
-        initiative: this.initiative,
-        ability: this.ability
-      });
+  watch: {
+    imageUrl: function(newVal, oldVal) {
+      
     }
   },
-  watch: {}
 };
 </script>
 

@@ -5,36 +5,55 @@
             <router-link class="settingsItem ship" to="ship">Ship</router-link>
             <router-link class="settingsItem layout" to="layout">Layout</router-link>
         </nav>
-        <router-view class="content"></router-view>
+        <transition name="page">
+            <router-view class="content"></router-view>
+        </transition>
     </div>
 </template>
 
 <script>
-    // Editor block for all the stats (Initiative, Hull, Shields, actions)
-    // Split up the actions block to a different view? Became a bit complicated
-    // Ships now have pilot and ship abilities
-    export default {
-        name: 'Settings'
-    }
+// Editor block for all the stats (Initiative, Hull, Shields, actions)
+// Split up the actions block to a different view? Became a bit complicated
+// Ships now have pilot and ship abilities
+export default {
+  name: "Settings"
+};
 </script>
 
 <style lang="scss" scoped>
-    .subcontent{
-        height: 100%;
-        width: 100%;
+.subcontent {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 1s;
+  }
+
+  .page-enter {
+    position: absolute;
+    transform: translateX(-1000px);
+  }
+
+  .page-leave-to {
+    position: absolute;
+    transform: translateX(1000px);
+  }
+}
+.settingsMenu {
+  display: flex;
+  .settingsItem {
+    flex-grow: 1;
+    min-width: 100px;
+    display: block;
+    &.router-link-active {
+      border-bottom: 1px solid #4e4e4e;
     }
-    .settingsMenu{
-        display: flex;
-        .settingsItem{
-            flex-grow: 1;
-            min-width: 100px;
-            display: block;
-            &.router-link-active{
-                border-bottom: 1px solid #4e4e4e;
-            }
-        }
-    }
-    .content{
-        padding-top: 2rem;
-    }
+  }
+}
+.content {
+  padding-top: 2rem;
+}
 </style>

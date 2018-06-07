@@ -75,8 +75,9 @@ textarea[name="shipability"] {
 
     &.split {
       display: flex;
+      justify-content: space-between;
       input{
-        margin-right: 1rem;
+        
       }
     }
   }
